@@ -2,6 +2,10 @@
 
 <!-- String Interpolation -->
 <!-- <p>{{ 'Server' }} with ID {{ serverId }} is {{ serverStatus }}</p> -->
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<p 
+    [ngStyle] = "{backgroundColor: getColor()}"
+    [ngClass] = "{online: this.serverStatus === 'online'}">
+    {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
 
 <!-- Property Binding -->
